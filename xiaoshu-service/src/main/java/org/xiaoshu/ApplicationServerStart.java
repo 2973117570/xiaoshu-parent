@@ -35,6 +35,7 @@ public class ApplicationServerStart  extends SpringBootServletInitializer  {
 	private final static Logger _logger = LoggerFactory.getLogger(ApplicationServerStart.class);
 	
 	public static void main(String[] args) {
+		_logger.info("start server ...");
 		SpringApplication.run(ApplicationServerStart.class, args);
 	}
 	
