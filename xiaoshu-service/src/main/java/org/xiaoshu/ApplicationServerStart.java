@@ -28,7 +28,7 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
-//@ImportResource("classpath:application-service-provider.xml")
+@ImportResource("classpath:spring/application-xiaoshu-service.xml")
 @EnableScheduling
 @EnableAspectJAutoProxy
 public class ApplicationServerStart  extends SpringBootServletInitializer  {
