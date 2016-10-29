@@ -16,6 +16,29 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
+  		<dependency>
+  		 <groupId>com.xiaoshu</groupId>
+  		 <artifactId>xiaoshu-core</artifactId>
+  		<version>${project.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>*</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+  		</dependency>
+  		
+  		<dependency>
+  			<groupId>com.xiaoshu</groupId>
+  			<artifactId>xiaoshu-common</artifactId>
+  			<version>${project.version}</version>
+  			<exclusions>
+  				<exclusion>
+  					<groupId>*</groupId>
+  					<artifactId>*</artifactId>
+  				</exclusion>
+  			</exclusions>
+  		</dependency>
    
   </dependencies>
 </project>

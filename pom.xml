@@ -71,23 +71,6 @@
 			<version>${springboot-client.version}</version>
 		</dependency>
 
-		<!-- Spring Security Oauth2.0 -->
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-config</artifactId>
-			<version>${spring-security.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-taglibs</artifactId>
-			<version>${spring-security.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security.oauth</groupId>
-			<artifactId>spring-security-oauth2</artifactId>
-			<version>${spring-security-oauth2.version}</version>
-		</dependency>
-
 		<!-- database server -->
 		<dependency>
 			<groupId>mysql</groupId>
