@@ -5,10 +5,13 @@ import io.swagger.annotations.ApiOperation;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.xiaoshu.service.model.UserRecords;
+import org.xiaoshu.service.provider.UserRecordsProvider;
 
 import com.alibaba.fastjson.JSON;
 
@@ -25,15 +28,21 @@ import com.alibaba.fastjson.JSON;
  */
 @Api(value = "基础服务",description="提供服务器状态查询接口，检查服务器状态是否良好")
 @RestController
-@RequestMapping(value="/admin")
+@RequestMapping(value="/test")
 public class MainController {
 
 	private final static Logger logger = LoggerFactory.getLogger(MainController.class);
+	@Autowired
+	private UserRecordsProvider userRecordsProvider;
 	
 	@ApiOperation("服务器状态查询")
 	@RequestMapping(value="/status",method=RequestMethod.GET)
 	public String  getServerStatus(){
 		logger.info("get Server status");
+		UserRecords userRecords = new UserRecords();
+		userRecords.setName("tommy");
+		userRecords.setPassword("tommmy@123.com");
+		userRecordsProvider.insert(userRecords);
 		return JSON.toJSONString("服务器状态正常");
 	}
 	
