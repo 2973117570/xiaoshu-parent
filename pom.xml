@@ -5,7 +5,7 @@
   <groupId>com.xiaoshu</groupId>
   <artifactId>xiaoshu-parent</artifactId>
   <version>1.0.0</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
 
   <name>xiaoshu-parent</name>
   <url>http://maven.apache.org</url>
